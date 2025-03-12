@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.device-page .container-fluid {
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  font-family: 'Inter';
+  font-weight: 300;
+  margin: 0 auto; 
+  padding: 0 8%; 
+}
+
+.device-page .device-card {
+  background-color: #1e1e1e;
+  border: 1px solid #ffffff3d;
+  border-radius: 12px;
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  width: 100%; 
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin: 0;
+}
+
+.device-page .device-card:hover {
+  transform: scale(1.02);
+}
+
+.device-page .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: -5px; 
+  gap: 5px; 
+  padding-top: 2px;
+}
+
+.device-page .col-lg-3, .device-page .col-md-4, .device-page .col-sm-6 {
+  padding:  5px; 
+  flex: 0 0 calc(25% - 10px); 
+  max-width: calc(25% - 10px); 
+}
+
+.device-page .device-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.device-page .icons {
+  display: flex;
+  gap: 8px;
+}
+
+.device-page .icon {
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.device-page .icon.active {
+  color: #28a745;
+}
+
+.device-page .status-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.device-page .badge {
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  font-family: Inter;
+  font-weight: 300;
+  display: inline-block;
+  min-width: 65px;
+  text-align: center;
+}
+
+.device-page .badge-online {
+  background-color: #00A44B33;
+  color: #00A44B;
+}
+
+.device-page .badge-offline {
+  background-color: #DD2D2433;
+  color: #DD2D24;
+}
+
+.device-page .badge-deployed {
+  background-color:#26A2E933;    
+  color:#26A2E9;
+}
+
+.device-page .device-info {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.device-page .search-bar-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 24%; 
+}
+
+.device-page .search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #1E1E1E;
+  border-radius: 15px;
+  border: 1px solid #ffffff3d;
+  padding: 5px 10px;
+  width: 100%; 
+  max-width: 50%;
+}
+
+.device-page .search-input {
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 5px;
+  font-family: 'Inter';
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.device-page .search-icon, .device-page .filter-icon {
+  color: #BDBDBD;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+@media (max-width: 1200px) {
+  .device-page .col-lg-3, .device-page .col-md-4, .device-page .col-sm-6 {
+    flex: 0 0 calc(33.33% - 10px); 
+    max-width: calc(33.33% - 10px); 
+  }
+}
+
+@media (max-width: 992px) {
+  .device-page .search-bar-container {
+    margin-left: 20%; 
+  }
+  .device-page .search-bar {
+    max-width: 60%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .device-page .row {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+  .device-page .col-lg-3, .device-page .col-md-4, .device-page .col-sm-6 {
+    flex: 0 0 calc(50% - 10px); 
+    max-width: calc(50% - 10px); 
+  }
+  .device-page .search-bar-container {
+    margin-left: 10%; 
+  }
+  .device-page .search-bar {
+    max-width: 80%; 
+  }
+}
+
+@media (max-width: 576px) {
+  .device-page .col-lg-3, .device-page .col-md-4, .device-page .col-sm-6 {
+    flex: 0 0 calc(100% - 10px); 
+    max-width: calc(100% - 10px);
+  }
+  .device-page .search-bar-container {
+    margin-left: 0; 
+    justify-content: center; 
+    margin-left: 20px; 
+    margin-bottom: 5px;
+  }
+  .device-page .search-bar {
+    max-width: 100%; 
+  }
+}
+
+@media (max-width: 425px) {
+  .device-page .d-flex.justify-content-between.align-items-center.mb-4 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .device-page .search-bar-container {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .device-page .search-bar {
+    width: 100%;
+  }
+}
